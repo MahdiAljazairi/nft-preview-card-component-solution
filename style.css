@@ -1,0 +1,149 @@
+@import url(https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600);
+
+*, ::before, ::after {
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  grid-template:"................ .... ................" 1fr
+                "................ card ................" auto
+                "................ attr ................" minmax(2.5em,1fr)
+               / minmax(.5em,1fr) auto minmax(.5em,1fr);
+  min-height: 100vh;
+  margin: 0;
+  background: #0d192b;
+  font-family: Outfit, sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  color: #8bacda;
+  line-height: 1.6;
+}
+
+hr {
+  border: .05em solid #2f415b;
+  margin: .55em auto .8em;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  outline-offset: .25em;
+}
+
+a:hover,
+a:active {
+  color: #00fff7;
+}
+
+a.parent-link,
+a.parent-link:hover,
+a.parent-link:active {
+  color: currentColor;
+}
+
+a.parent-link:focus-visible {
+  outline: 0;
+}
+
+a.parent-link .child-link {
+  color: white;
+  outline-offset: .25em;
+}
+
+a.parent-link:hover .child-link,
+a.parent-link:active .child-link {
+  color: #00fff7;
+}
+
+a.parent-link:focus-visible .child-link {
+  outline: #101010 auto 3px;
+}
+
+.card {
+  grid-area: card;
+  width: 18.3em;
+  min-width: 16.6em;
+  padding: 1.4em;
+  background: #14253d;
+  border-radius: .8em;
+  box-shadow: 0 .8em 3.3em rgba(0,0,0,.5);
+}
+
+.card a {
+  display: block;
+}
+
+.card .title {
+  font-size: 1.1em;
+  font-weight: 600;
+  margin-bottom: -.25em;
+}
+
+.card .image a {
+  overflow: hidden;
+  border-radius: .5em;
+  position: relative;
+  background: rgba(0,0,0,.3);
+}
+
+.card .image img.cover {
+  display: block;
+  width: 100%;
+}
+
+.card .view {
+  display: none;
+  position: absolute;
+  top: 0; bottom: 0;
+  left: 0; right: 0;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0,255,247,.4);
+}
+
+.card .image a:hover .view,
+.card .image a:active .view {
+  display: flex;
+}
+
+.card .image a:focus-visible .view {
+    display: flex;
+}
+
+.card .info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card .price {
+  color: #00fff7;
+  font-weight: 400;
+}
+
+.card .expiry,
+.card .price,
+.card .creator > a {
+  display: flex;
+  align-items: center;
+  column-gap: .4em;
+}
+
+.card .expiry img,
+.card .price img {
+  margin-top: -.16em;
+}
+
+.card .avatar {
+  border-radius: 50%;
+  border: .08em solid white;
+  height: 2em;
+  margin-right: .5em;
+}
+
+.attribution {
+  grid-area: attr;
+  font-size: .6em;
+  align-self: center;
+  justify-self: center;
+}
