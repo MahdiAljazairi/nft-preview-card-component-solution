@@ -32,7 +32,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: <https://your-solution-url.com>
+- Solution URL: <https://www.frontendmentor.io/solutions/a-transparent-cube-NSHF6jb7ho>
 - Live Site URL: <https://nft-preview-card-component-solution-1234.netlify.app>
 
 ## My process
